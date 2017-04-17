@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{ height: 100% }
+        .wrapper{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%,-50%, 0);
+            width: 500px;
+            height: 400px;
+        }
+        .wrapper li{
+            position: absolute ;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            text-align: center;
+            list-style: none;
+            animation: hide ease-in  .6s;
+            transform: rotateY(-90deg);
+        }
+        .wrapper li img{ height: 100%}
+        .show{
+            animation: show ease-out .6s .6s forwards!important;
+
+        }
+        @keyframes show {
+            0% {
+                -webkit-transform: rotateY(-90deg);
+                transform: rotateY(-90deg);
+            }
+            100% {
+                -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+            }
+        }
+        @keyframes hide {
+            0% {
+                -webkit-transform: rotateY(0);
+                transform: rotateY(0);
+            }
+            100% {
+                -webkit-transform: rotateY(-90deg);
+                transform: rotateY(-90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<button onClick="showBlue()">看蓝色</button>
+<button onClick="showGreen()">看绿色</button>
+<ul class="wrapper">
+    <li class="show" id="blue">
+        <img src="pic1-blue.png">
+    </li>
+    <li id="green">
+        <img src="pic1-green.png">
+    </li>
+</ul>
+</body>
+<script>
+    function showGreen(){
+        document.getElementById('green').className = 'show';
+        document.getElementById('blue').className = '';
+    }
+    function showBlue(){
+        document.getElementById('blue').className = 'show';
+        document.getElementById('green').className = '';
+    }
+</script>
+</html>

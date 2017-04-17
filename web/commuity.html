@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kuyoo酷游--酷游社区</title>
+    <link type="text/css" href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="static/css/community.css" rel="stylesheet">
+
+
+</head>
+<body>
+<header>
+    <div class="container ">
+        <div class="row">
+            <div class="col-sm-1">
+                <a class="logo" href="index.html"></a>
+            </div>
+            <div class="col-sm-3">
+                <div class="dropdown">
+                    <div class=" input-group">
+                        <input class="form-control" id="search" type="text" placeholder="请输入问题或话题..." required>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default">搜索</button>
+                    </span>
+                    </div>
+                    <ul class="dropdown-menu topic-drop">
+                        <li class="dropdown-content">输入关键字进行搜索</li>
+                        <li class="dropdown-content">搜索：<a id="result"></a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <button class="btn btn-success pull-right" style="margin-right: 5px">发起问题</button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-sm-1 topic choose">
+                <span class="glyphicon glyphicon-magnet topic-font "></span>
+                <span class="topic-font ">&nbsp;发现</span>
+            </div>
+            <div class="col-sm-1 topic">
+                <span class="glyphicon glyphicon-comment topic-font "></span>
+                <span class="topic-font ">&nbsp;话题</span>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-1">
+                <button class="btn btn-normal btn-primary">登陆</button>
+            </div>
+            <div class="col-sm-1">
+                <button class="btn btn-normal btn-success">注册</button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="main-content">
+                <div class="col-sm-12 col-md-9 clear-padding">
+                    <ul class=" nav nav-tabs hidden-xs nav-top">
+                        <h3 class="mode"><span class="glyphicon glyphicon-list gly-em"></span>&nbsp;发现 </h3>
+                        <li>
+                            <a href="#">热门</a>
+                        </li>
+                        <li>
+                            <a href="#">推荐</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">最新</a>
+                        </li>
+                    </ul>
+                    <!--评论开始-->
+                    <div id="posts-wrapper">
+                    </div>
+                    <!--评论结束-->
+                </div>
+                <div class="col-sm-12 col-md-3 " style="padding: 0 0">
+                    <div class="content-right">
+                        <!--专题begin-->
+                        <div class="right-subject">
+                            <a class="pull-right more" href="#"><span>更多&gt;</span></a>
+                            <h6>热门话题</h6>
+                            <ul id="subject">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>Copyright © 2016, All Rights Reserved Powered By WeCenter 3.0 Beta 2</span>
+        </footer>
+    </div>
+    <div class="show-post">
+
+    </div>
+</div>
+<div>
+    <a class="back-to-top" href="#"><span class="glyphicon glyphicon-plane"></span></a>
+</div>
+<script type="text/javascript" src="static/js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/plugin/layer/layer.js"></script>
+
+</body>
+<script>
+
+    $(function () {
+        $("#search").focus(function () {
+            $(".dropdown-menu").css("display", "block");
+        }).blur(function () {
+            $(".dropdown-menu").css("display", "none");
+        }).bind('input propertychange', function () {
+            $('#result').html($(this).val());
+        });
+        $(".subject-item:last").css("border", "none");
+        $(".hot-topic:last").css("border", "none");
+        $(".nav-top > li > a").click(function () {
+            $(this).addClass("active")
+                    .parent().siblings().children("a")
+                    .removeClass("active");
+        });
+        common.getPosts();
+    });
+</script>
+</html>

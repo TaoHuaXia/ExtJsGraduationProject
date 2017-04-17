@@ -1,0 +1,32 @@
+body{background-color: #ebebeb;  }
+.welcome{
+    margin-bottom: 21px;
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+}
+.carousel-control{
+    padding-top: 189px;
+    font-size: 87px;
+}
+.carousel-control.left{  padding-right: 50px;  }
+.carousel-control.right{  padding-left: 50px;  }
+.container-full{  width: 100%;  }
+.row img{  position: relative;  }
+.col-lg-3:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #555;
+}
+.row h3{
+    position: absolute;
+    bottom: 20px;
+    left: 28px;
+    color: #fff;
+}
+.dec{
+    position: absolute;
+    bottom: 5px;
+    left: 35px;
+    color: #fff;
+}
+

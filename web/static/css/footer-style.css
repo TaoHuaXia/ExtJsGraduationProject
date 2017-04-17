@@ -1,0 +1,27 @@
+.footer{
+    padding-bottom: 30px;
+    margin-top: 50px;
+    /*background: url('../image/foot.png') #2b2d2e;*/
+    background-color: #2B2D2E;
+}
+.text{
+    width: 160px;
+    height: 30px;
+    margin-top: 40px;
+    background-color: #555;
+    border: none;
+}
+.drop{
+    height: 30px;
+    margin-top: 40px;
+    border: none;
+}
+.dropdown-menu{ background-color: #555;  }
+.dropdown-menu li a{ color: #fff;  }
+h5,h4{
+    margin-top: 15px;
+    color: #fff;
+}
+h4{
+    font-weight: 600;
+}

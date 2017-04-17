@@ -1,0 +1,264 @@
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none ;
+    outline: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+}
+body{background-color: #ebebeb;  }
+.welcome{
+    text-align: center;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 21px;
+}
+.author{
+    text-align: center;
+    font-weight: normal;
+    color: #959595;
+}
+.news{
+    margin: 10px 0;
+    padding: 35px;
+    background-color: #fff ;
+
+}
+.text-warning{
+    color: #f4645f;
+}
+.photo img{  width: 100%;  }
+.content{ margin: 30px 0}
+.content p{
+    text-indent: 2em;
+    color: #444443;
+    font: 400 18px/1.62 "Georgia","Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+}
+.btn-read{
+    border: 1px solid #f4645f;
+    background: #f4645f no-repeat none 0 0;
+    color:#fff;
+}
+.btn-read:hover{
+    border: 1px solid #303030;
+    background: #303030 none no-repeat 0 0;
+    color: #fff;
+}
+.news-footer{
+    padding-top: 1rem;
+    margin-top: 36px;
+    text-align: right;
+    border-top: 1px solid #959595;
+    line-height: 50px;
+}
+ .cost{
+    font-size: 1.5rem;
+    color: #f4645f;
+}
+.article-list{
+    position: relative;
+    margin-top: 10px;
+    padding: 20px 35px;
+    background-color: #fff;
+}
+.article-list h3{ font-weight: 600;  }
+.articles li {
+    width: 191px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 40px;
+    border-bottom: 1px dotted #555;
+}
+.articles li:hover{ color:#56CC42}
+.articles li:hover a{ color:#56CC42}
+.article-footer{
+    height: 50px;
+    line-height: 50px;
+}
+.btn-down{ margin-top: 20px;  }
+.red-line
+{
+    position: absolute;
+    display: block;
+    width: 68px;
+    height: 1px;
+    background-color: red;
+    top: 79px;
+    left: 36px;
+}
+#write-btn{ margin-top: 1rem }
+.loading{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 999;
+}
+.loading > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition: 1s;
+    animation: rotate 1s infinite ;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg) }
+    100%{ transform: rotate(360deg)}
+}
+.form-item label{
+    font-size: 1rem;
+    font-weight: normal;
+}
+.form-horizontal{
+    width: 90%;
+    margin: 0 auto;
+}
+.control-label{ text-align: left!important;}
+#showImg{ text-align: center; padding-top: 15px}
+#showImg > img{ max-width: 100%}
+#nomore{
+    text-align: center;
+    color: #929292;
+    display: none;
+}
+#fetch-more{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    color: #444443;
+    font-family:"Georgia","Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+    background-color: #fff;
+    border: none;
+}
+#fetch-more:hover{
+    outline: 1px solid #99cedb;
+}
+/*
+
+    弹出详情
+
+*/
+.shade{
+    position: fixed;
+    width: 5%;
+    padding-top: 5%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition:1s ease-in;
+    border-radius: 50%;
+    background-color: #B0E69A;
+    z-index: 5;
+    visibility: hidden;
+}
+.shade.open{
+    visibility: visible;
+    transform: scale(30);
+}
+@keyframes scaleout {
+    0% {transform: scale(0);  }
+    100% {transform: scale(30);  }
+}
+.article-detail{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    background-color: #B0E69A;
+    visibility: hidden;
+    transition: all .5s;
+    transition-delay: .5s;
+    opacity: 0;
+    z-index: 10;
+}
+.article-content{
+    position: relative;
+    padding: 3rem 0;
+    width: 77%;
+    min-width: 890px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+}
+.article > h5{
+    margin:  0;
+    height: 4rem;
+    line-height: 4rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #303030;
+}
+.article-content > button {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    width: 2rem;
+    height: 2rem;
+    color: #929292;
+    border-radius: 50%;
+    border:  1px solid #ebebeb;
+    background: none;
+    transition: 1s;
+}
+.article-content > button:hover{     border:  1px solid #303030; color: #303030  }
+.article-content > button:focus{ outline: none }
+.article > p{  color: #959595;  }
+.article > img{
+    width: 82%;
+    margin-bottom: 2rem;
+}
+.article-body{
+    width: 82%;
+    margin: 0 auto;
+}
+.article-body > p{
+    text-align: left;
+    text-indent: 2em;
+    color: #444443;
+    font: 400 1rem/1.62  "Hiragino Sans GB";
+}
+.article-detail.open{
+    visibility: visible;
+    opacity: 1;
+}
+.article-detail.close {
+    display: none;
+}
+.leader-img{  text-align: center;  }
+.leader-img > img{ width: 70%}
+.leader-info  dt, .leader-info  dd {
+    height: 2rem;
+    line-height: 2rem;
+    font: 400 1rem  "Hiragino Sans GB";
+
+}
+.join-wrapper{ margin-top: 3rem}
+.info-title{
+    margin-bottom: 2rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    color: #c0a16b;
+    border-bottom: 1px solid #c0a16b;
+    text-align: left;
+}

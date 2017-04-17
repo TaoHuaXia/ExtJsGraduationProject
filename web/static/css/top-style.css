@@ -1,0 +1,113 @@
+body
+{
+    font-family: "Microsoft YaHei UI";
+}
+html{
+    font-size: 17px;
+}
+body.open{ overflow: hidden }
+.back-to-top{
+    position: fixed;
+    right: 35px;
+    bottom: 25px;
+    padding: 8px 12px;
+    font-size: 29px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #f1585a;
+}
+.back-to-top:hover{ color: #fff}
+.back-to-top:visited{ color: #fff}
+#hello{
+    font-weight: 600;
+    font-size: 3em;
+    color: #fff;
+}
+.btn-doc{
+    position: relative;
+    bottom: -40px;
+    color: #fff;
+    margin: 10px 10px;
+    background-color: #f1585a;
+    border: 1px solid #f1362f;
+}
+.btn-doc:hover{
+    color: #fff;
+    border: 1px solid #303030;
+    background-color: #303030;
+}
+.btn-doc.active{
+    color: #fff;
+    border: 1px solid #303030;
+    background-color: #303030;
+}
+header{
+    transition: background 1s linear;
+    -webkit-transition:background 1s linear;
+    -moz-transition:background 1s linear;
+    -o-transition:background 1s linear;
+    background: url('../image/bac.jpg') no-repeat;
+    background-size: cover;
+    padding: 62px 0;
+    text-align: center
+}
+.main-nav{
+    position: relative;
+    margin-bottom: 35px;
+    text-align: center;
+    background-color:#fff;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #e1e1e1;
+}
+.main-nav .menu li{
+    list-style: outside none none;
+    display: inline-block;
+    position: relative;
+}
+.main-nav .menu li a{
+    padding: 0 20px;
+    text-decoration: none;
+    display: block;
+    line-height: 4em;
+    color: #505050;
+}
+.main-nav .menu li a:hover{
+    color: #f4645f;
+}
+@media (min-width: 768px) {
+    .navbar-header {
+        display: none;
+    }
+}
+.navbar-header button span{
+    font-size: 21px;
+}
+.btn-hide{
+    background: none;
+    border: none;
+}
+.choose{
+    border-bottom: 2px solid #f4645f;
+}
+
+.user-text{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+#user{ color: #f19086  }
+.like-bar{
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+.like-bar > span{
+    cursor: pointer;
+}
+.clicked{
+    color: #f15f4f;
+}

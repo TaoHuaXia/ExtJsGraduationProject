@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    font: normal 14px 'Helvetica Neue',STHeiti,'Microsoft YaHei',Helvetica,Arial,sans-serif ;
+}
+body{
+    background: url("../image/bg.png") repeat;
+}
+a{
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none!important;
+    white-space: nowrap;
+}
+li{  list-style: none;  }
+header{
+    width: 100%;
+    min-height: 50px;
+    background-color: #f4726d;
+}
+.back-to-top{
+    position: fixed;
+    right: 35px;
+    bottom: 25px;
+    padding: 8px 12px;
+    font-size: 29px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #f1585a;
+}
+.back-to-top span{
+    font-size: 29px;
+    color: #fff;
+}
+.container{
+    width: 990px!important;
+}
+.clear-padding{
+    padding: 0 0 20px;
+    border-right: 1px solid #ddd;
+}
+
+.gly-em{
+    font-size: 18px;
+    font-weight:lighter;
+}
+.more{
+    color: #155faa;
+    font-size: 13px;
+    margin-top: 4px;
+}
+.form-control{
+    outline: none!important;
+}
+.logo{
+    display: block;
+    height: 40px;
+    margin-top: 7px;
+    background: url("../image/logo.png") no-repeat scroll 0 0 / contain !important;;
+}
+.input-group{
+    margin-top: 7px;
+}
+.topic:hover{
+    background-color: #f8a09c;
+    cursor: pointer;
+}
+.topic{
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.topic-font{
+    font-weight: normal;
+    color: #fff;
+}
+.topic-drop{
+    margin-top: 9px;
+    background-color: #fff;
+}
+.dropdown-content{
+    padding-left: 5px;
+    padding-bottom: 3px;
+    font-size: 15px;
+    color: #979a95;
+}
+#result{  color: #2e6da4;  }
+#result:hover{
+    background: none;
+    color: #2b669a;
+}
+.topic-drop li{  width: 314px;  }
+.choose{  background-color: #f8a09c  }
+.btn-normal{
+    margin-top: 7px;
+    min-width: 76px;
+    height: 37px;
+    color: #fff;
+}
+.nav-tabs li{  float: right;  }
+.nav-tabs li a:hover{
+    font-weight: bold;
+    background-color: #fff;
+    border-color: #fff;
+    border-bottom: 3px solid #155faa;
+}
+.active{
+    font-weight: bold;
+    border-bottom: 3px solid #155faa!important;
+}
+.content{
+    position: relative;
+    width: 100%;
+    margin-top: 45px;
+}
+.main-content{
+    overflow: hidden;
+    zoom: 1;
+    margin: 0 15px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6 ;
+    border-radius: 4px;
+}
+.nav-top{
+    min-height: 65px;
+    padding-top: 23px;
+    padding-right: 20px;
+}
+.mode{
+    position: absolute;
+    top: 3px;
+    left: 32px;
+
+}
+.text-content{
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+.content-item{
+    position: relative;
+    padding: 14px 0 14px 50px;
+}
+.user{
+    position: absolute;
+    top: 24px;;
+    left: 0;
+}
+.user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+.question{  margin-top: 0;  }
+.question-content h3 a{  color: #155ffa;  }
+.question-content h3 a:hover{  color: #499ef3 ;  }
+.describe a ,.describe span{
+    font-size: 11px;
+    color: #8c8c8c;
+}
+.user-name{  color: #843534!important;  }
+.user-name:hover{
+    text-decoration: none;
+}
+.content-right{  padding: 20px 20px;  }
+.right-subject h6{
+    font-size: 19px;
+    margin: 7px 0;
+}
+.subject-item{
+    padding: 14px 0;
+    border-bottom: 1px dotted #ddd;
+}
+.subject-item  a{
+    display: block;
+    color: #155faa;
+}
+.subject-item  a:hover{  color: #499ef3;  }
+.hot-topic{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.topic-head{
+    font-size: 19px;
+    margin: 19px 0;
+}
+.topic-item{
+    position: relative;
+    padding-left: 35px;
+    margin: 18px 0;
+}
+.topic-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.topic-image img{
+    height: 32px;
+    width: 32px;
+}
+.topic-text a{
+    padding: 1px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    color: #fff;
+    background-color: #99cfff;
+    border-radius: 4px;
+}
+.topic-text a:hover{  background-color: #155faa}
+.kuyoo-text a{  color: #245580;  }
+.kuyoo-text a:hover{ color: #1b6d85}
+footer{
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+}
+/*
+
+   查看帖子详情
+
+*/
+.show-post{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+
+}

@@ -1,0 +1,120 @@
+header .logo{ vertical-align: middle}
+header .logo > img{  height: 40px;  }
+html{
+    font-size:17px;
+}
+header{
+    height: 50px;
+    line-height: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    background-color: #f4726d;
+}
+.post-wrapper{
+    position: relative;
+    padding: 0 0 2rem 0;
+    margin-top: 5rem;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+.post-wrapper >h5{
+    margin: 0;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family:  "Georgia","Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei";
+    border-bottom: 1px solid #e6e6e6 ;
+}
+.loading{
+    position: absolute;
+    top:0;
+    left: 0;
+    min-height: 350px;
+    background-color: #ffffff;
+    z-index: 999;
+}
+.loading > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition: 1s;
+    animation: rotate 1s  infinite ease ;
+    animation-fill-mode: forwards ;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg) }
+    100%{ transform: rotate(360deg)}
+}
+.comment-item{
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+}
+.comment-item .comment-left{
+    padding: 2rem 0;
+    text-align: center;
+    border-right: 1px solid #e6e6e6;
+    background-color: #F0F5FB;
+}
+.comment-left > img{
+    margin-bottom: 1rem;
+    width: 40%;
+}
+.comment-left > p{
+    font-weight: normal;
+    font-size: .8rem;
+}
+.comment-left > .poster{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: -2px;
+    top: -1px;
+    background: transparent url("./images/poster.png") no-repeat center;
+}
+.comment-item .comment-right{
+    position: static;
+    padding: 2rem 3rem 0 0;
+}
+.comment-right .content > p{
+    text-indent: 2rem;
+}
+.comment-right > span{
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    font-size: .8rem;
+    color: #929292;
+}
+.reply-wrapper{
+    margin: 2rem auto;
+    padding: 0;
+    min-height: 300px;
+}
+.reply-wrapper > h5{
+    margin: 0;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: .8rem;
+    font-weight: normal;
+    padding-left: 1rem;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+.reply-wrapper .btn-wrapper{
+    margin-top: 1rem;
+    text-align: right;
+}
+#comment-editor{
+    width: 100%;
+    min-height: 300px;
+}
